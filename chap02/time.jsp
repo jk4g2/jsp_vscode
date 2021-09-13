@@ -9,14 +9,14 @@
     </head>
 
     <body>
-        <!--주석처리-->
-        <% String bookTitle="JSP 프로그래밍" ; //hi /* hello world*/ %>
-            <%-- Date는 일반부--%>
-                <b>
-                    <%= bookTitle %>
-                </b>공부합니다 <br>
+    <!--주석처리-->
+    <% String bookTitle="JSP 프로그래밍" ; //hi /* hello world*/ %>
+    <%-- Date는 일반부--%>
+        <b>
+            <%= bookTitle %>
+        </b>공부합니다 <br>
 
-                오늘의 날짜와 현재 시간은 : <%= new java.util.Date() %>
+        오늘의 날짜와 현재 시간은 : <%= new java.util.Date() %>
 
 
     </body>
