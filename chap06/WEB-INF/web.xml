@@ -14,6 +14,20 @@
   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
   See the License for the specific language governing permissions and
   limitations under the License.
+
+데이터베이스 연결과 관련된 설정 파일의 경로나, 
+로깅 설정, 
+파일 또는 웹 어플리케이션의 주요 속성 정보를 담고 있는 파일의 경로 
+등을 지정할 때
+
+200  - 정상
+307  -  임시 페이지 리다이렉트
+400  - 클라이언트요청이 잘못된 구문으로 구성됨
+401  - 접근을 허용하지 않음
+404  - 해당하는 자원이 존재않함
+405  - 요청 메서드(get, post등) 전송방식을 허용않함
+500  - 서버 내부 에러 발생(ex. jsp 익셉션)
+503  - 서버 과부하 오류 
 -->
 <web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -22,16 +36,19 @@
   version="3.1"
   metadata-complete="true">
 
-<context-param>
-	<description>로깅여부</description>
-  <param-name>logEnabled</param-name>
-	<param-value>true</param-value>
-</context-param>
+<error-page>
+	<error-code>404</error-code>
+	<location>/error/error404.jsp</location>
+</error-page>
 
-<context-param>
-	<description>디버깅 레벨</description>
-	<param-name>debugLevel</param-name>
-	<param-value>5</param-value>
-</context-param>
+<error-page>
+	<error-code>500</error-code>
+	<location>/error/error500.jsp</location>
+</error-page>
+
+<error-page>
+	<exception-type>java.lang.NullPointerException</exception-type>
+	<location>/error/errorNullPointer.jsp</location>
+</error-page>
 
 </web-app>
