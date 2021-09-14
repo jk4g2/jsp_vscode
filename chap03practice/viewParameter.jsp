@@ -29,7 +29,7 @@
             for(int i =0;i < petParam.length; i++){ %>
                 <%=petParam[i] %>
             <%}
-            }         
+            }
         %>
 
     </p>
