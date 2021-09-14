@@ -19,8 +19,10 @@
         ////application.getResource(resourcePath)
         //어플리케이션 내에서 지정한 경로에 해당하는 자원에 접근할수 있는 URL 객체를 리턴한다.
         URL url = application.getResource(resourcePath);
-        
-        
+        //out.println(url);
+        %>
+       <br>
+       <% 
         try(InputStreamReader fr = new InputStreamReader(url.openStream(),"utf-8")){
             while((len = fr.read(buff))!=-1){
                 out.print(new String(buff,0,len));
