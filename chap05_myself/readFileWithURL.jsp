@@ -14,7 +14,7 @@
         //어플리케이션 내에서 지정한 경로에 해당하는 자원에 접근할 수 있는 URL객체를 리턴
         URL url = application.getResource(resourcePath);
         out.println(url);
-        %><br>
+    %><br>
 
 
         <%

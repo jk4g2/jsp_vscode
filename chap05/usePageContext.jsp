@@ -11,6 +11,7 @@
     %>
 
     request 기본 객체와 pageContext.getRequest()의 동일여부<br>
+    <!--request 기본객체와 pageContext.getRequest()는 같다는걸 보여주는 예시. -->
     <%= request == httpRequest %>
     
     <br>
