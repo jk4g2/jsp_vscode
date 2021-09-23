@@ -1,8 +1,10 @@
 <html>
 <head>
-    <title>Document</title>
+    <title> 시간대 목록</title>
 </head>
 <body>
-    
+    <c:forEach var="id" items="<%=java.util.TimeZone.getAvailableDs() %>">
+        ${id}<br/>
+    </c:forEach>
 </body>
 </html>
