@@ -8,6 +8,7 @@
     <c:catch var="ex">
     name 파라미터의 값 = <%=request.getParameter("name")%><br>
     <% if(request.getParameter("name").equals("test")){%>
+    <!--<% if("test".equals(request.getParameter("name"))){ -->
         ${param.name}은 test 입니다.
     <%}%>
     </c:catch>
